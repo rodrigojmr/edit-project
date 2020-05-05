@@ -1,0 +1,45 @@
+.carrousel {
+  border-top: 1px solid $light-gray;
+  text-align: center;
+  .carrousel-title {
+    margin: 50px auto;
+  }
+  .carrousel-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .slick-slide img {
+    margin: auto;
+    height: 300px;
+    width: auto;
+  }
+
+  .slick-arrow {
+    height: 100%;
+    background-color: $light-gray;
+    width: 40px;
+    z-index: 1;
+  }
+
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    background: $light-gray;
+    color: $white;
+  }
+  
+  .slick-next:before,
+  .slick-prev:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 50px;
+  }
+  .slick-next:before {
+    content: "\f054";
+  }
+  .slick-prev:before {
+    content: "\f053";
+  }
+}

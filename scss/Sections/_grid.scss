@@ -1,0 +1,210 @@
+.grid {
+    width: 95%;
+    margin: auto;
+    font-size:0px;
+
+    /* 4 columns */
+    .col {
+        display: inline-block;
+        width: 25%;
+        height: 1200px;
+        font-size: 14px;
+        vertical-align: middle;
+
+        @include media(">=large","<xx-large") {
+            height: 100vh;
+        }
+        @include media(">medium","<=large") {
+            height: 110vh;
+        }
+        @include media("<=medium") {
+            // height: 90vh;
+            width: 50%;
+        }
+        @include media("<=small") {
+            height: 120vh;
+            width: 50%;
+        }
+    }
+
+    /* Each indvidual block in the grid */
+    .item {
+        display: block;
+        position: relative;
+        border: none;
+        text-align: center;
+        height: 33.33%;
+        height: calc(100%/3);
+        overflow: hidden;
+
+    // For blocks with links
+        .link-block {
+            display: block;
+            position: relative;
+            height: 100%;
+        }
+
+        &.xl {
+            height: 66.66%;
+            height: calc((100%/3)*2);
+        }
+
+        &:hover .background {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+    }
+
+    // To use when a block has background image
+    .background {
+        display:block;
+        position: relative;
+        height: 100%;
+        transition: all 1s;
+        opacity: 0.5;
+
+        img {
+            height: 115%;
+            transform:translate(-50%,-50%);
+            left:50%;
+            top:50%;
+            position:absolute;
+        }
+    }
+
+    /* The text content within each item */
+    article {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFF;
+        font-size: 1rem;
+        padding: 6em;
+        width: 100%;
+
+        @include media("<=xx-large") {
+            padding: 5em;
+        }
+        @include media("<=x-large") {
+            padding: 4em;
+        }
+        @include media("<=large") {
+            padding: 3em 2.5em;
+        }
+        // @include media("<=medium") {
+        //     padding: 40px;
+        // }
+
+        .grid-title {
+            font-size: 3.5em;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            @include media("<=large") {
+                font-size: 3em;
+            }
+            // @include media("<=medium") {
+            //     font-size: 40px;
+            // }
+            // @include media("<=small") {
+            //     font-size: 28px;
+            // }
+        }
+
+        p {
+            font-style: italic;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            @include media("<=medium") {
+                font-size: 2rem;
+            }
+            // @include media("<=medium") {
+            //     font-size: 24px;
+            // }
+        }
+    }
+
+    .highlight-text {
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Separated item and social to avoid conflicts with P, the style is the same */        
+    .social {
+        display: block;
+        position: relative;
+        border: none;
+        text-align: center;
+        height: 33.33%;
+        height: calc(100%/3);
+        overflow: hidden;
+
+        figure {
+            position: relative;
+            padding-bottom: 1rem;
+
+            @include media("<=medium") {
+                margin-bottom: 0px;
+                }     
+
+            &:before{
+                content: '—';
+                font-size: 2rem;
+                position: relative; 
+                top: -1.5rem;
+                left: -1rem;
+            }
+
+            &:after {
+                content: '—';
+                font-size: 2rem;
+                height: 25px;
+                position: relative; 
+                top: -15px;
+                left: 10px;
+            }
+        }
+
+        article {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFF;
+            font-size: 1rem;
+            padding: 6em;
+            width: 100%;
+            
+            @include media("<=xx-large") {
+                padding: 4em;
+            }
+
+            @include media("<=x-large") {
+                padding: 3em;
+                }     
+
+            img {
+            margin-bottom: 10px;
+
+            @include media("<=medium") {
+                margin-bottom: 5px;
+                }            
+            }
+            p {
+                font-size: 1.7em;
+                font-style: italic;
+                font-weight: 400;
+                text-transform: none;
+                margin-bottom: 10px;
+                line-height: 1.2;
+
+                &:last-of-type {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

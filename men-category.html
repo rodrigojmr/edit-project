@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <title>Website</title>
+    <!--Generic meta-->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, initial-scale = 1.0, shrink-to-fit=no"
+    />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="" />
+    <!--extra meta-->
+    <meta name="google" content="notranslate" />
+    <!--fb meta-->
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:type" content="website" />
+    <!--twitter meta-->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta namgulpe="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <!--Add to home screen icon-->
+    <link href="images/system/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      href="images/system/apple-touch-icon-76x76.png"
+      rel="apple-touch-icon"
+      sizes="76x76"
+    />
+    <link
+      href="images/system/apple-touch-icon-120x120.png"
+      rel="apple-touch-icon"
+      sizes="120x120"
+    />
+    <link
+      href="images/system/apple-touch-icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="images/system/apple-touch-icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <!--favicon-->
+    <link rel="shortcut icon" href="/images/system/favicon.ico" />
+    <link rel="icon" type="image/ico" href="/images/system/favicon.ico" />
+    <!--Font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,800|Montserrat:400,600|Source+Serif+Pro|&display=swap"
+      rel="stylesheet"
+    />
+    <!--Links-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="/vendor/fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/js/slick/slick.css" />
+    <link rel="stylesheet" href="/js/slick/slick-theme.css" />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/771b01260b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!--GA-->
+
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function() {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
+
+    ga("create", "UA-XXXXXXXX-X", "auto");
+    ga("send", "pageview");
+  </script>
+
+  <body class="products-page">
+    <!--HEADER-->
+    <header>
+      <nav class="main-nav">
+        <a href="index.html" class="logo">SH</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn">
+          <span class="navicon"></span>
+        </label>
+        <ul class="menu">
+          <li><a href="#">Woman</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Coming Soon</a></li>
+          <li><a href="#">About</a></li>
+          <li class="mobile-account">
+            <a href="#" class="login"><i class="fas fa-user"></i>Log In</a>
+          </li>
+          <li class="mobile-account">
+            <a href="#" class="basket"
+              ><i class="fas fa-shopping-basket"></i>Basket</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="account">
+        <ul>
+          <li>
+            <a href="#" class="login"><i class="fas fa-user"></i>Log In</a>
+          </li>
+          <li>
+            <a href="#" class="basket"
+              ><i class="fas fa-shopping-basket"></i>Basket</a
+            >
+            <ul class="basket-products">
+              <li class="basket-product">
+                <div class="img-thumb-cont">
+                  <img
+                    src="../img/products/floral plimsoll/thumbs/Floral-Plimsoll-1-S.jpg"
+                    alt=""
+                    class="product-thumbnail"
+                  />
+                </div>
+                <p class="product-title">Floral Plismoll</p>
+                <p class="product-price">€99.95</p>
+                <i class="fas fa-times"></i>
+              </li>
+              <li class="basket-product">
+                <div class="img-thumb-cont">
+                  <img src="" alt="" class="product-thumbnail" />
+                </div>
+                <p class="product-title">Coated 5 Pocket Trousers</p>
+                <p class="product-price">€99.95</p>
+                <i class="fas fa-times"></i>
+              </li>
+              <li class="price-total-container">
+                <p>
+                  <em>Subtotal:</em> <span class="price-subtotal">€567.95</span>
+                </p>
+                <button class="btn btn--orange btn-checkout">Checkout</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="search-section">
+        <form class="search-form">
+          <input
+            type="text"
+            name="input"
+            class="input"
+            id="search-input"
+            placeholder="Search something..."
+          />
+          <button class="search" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+    <!-- BREADCRUMBS -->
+    <section class="breadcrumbs">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Men</a></li>
+      </ul>
+    </section>
+    <!-- PRODUCTS CATEGORY SHOWCASE -->
+    <section class="category-showcase">
+      <div class="wrapper">
+        <h1 class="section-title">Men</h1>
+        <a class="section-subtitle">All products</a>
+      </div>
+      <div class="filters">
+        <div class="filter-wrapper">
+          <div class="filter">
+            <div class="filter__trigger">
+              <span>Price</span>
+              <div class="arrow"></div>
+            </div>
+            <div class="filter-options" id="price-filter">
+              <span class="filter-option selected" data-value="all"
+                >All Prices</span
+              >
+              <span class="filter-option" data-value="20to30">€20-30</span>
+              <span class="filter-option" data-value="30to50">€30-50</span>
+              <span class="filter-option" data-value="50to100">€50-100</span>
+              <span class="filter-option" data-value="100to500"
+                >€100 and more</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="filter-wrapper">
+          <div class="filter">
+            <div class="filter__trigger">
+              <span>Size</span>
+              <div class="arrow"></div>
+            </div>
+            <div class="filter-options" id="size-filter">
+              <span class="filter-option selected" data-value="all"
+                >All Sizes</span
+              >
+              <span class="filter-option" data-value="XS">XS</span>
+              <span class="filter-option" data-value="S">S</span>
+              <span class="filter-option" data-value="M">M</span>
+              <span class="filter-option" data-value="L">L</span>
+              <span class="filter-option" data-value="XL">XL</span>
+            </div>
+          </div>
+        </div>
+        <div class="filter-wrapper">
+          <div class="filter">
+            <div class="filter__trigger">
+              <span>Color</span>
+              <div class="arrow"></div>
+            </div>
+            <div class="filter-options" id="color-filter">
+              <span class="filter-option selected" data-value="all"
+                >All Colors</span
+              >
+              <span class="filter-option" data-value="white">White</span>
+              <span class="filter-option" data-value="black">Black</span>
+              <span class="filter-option" data-value="grey">Grey</span>
+              <span class="filter-option" data-value="cream">Cream</span>
+              <span class="filter-option" data-value="blue">Blue</span>
+              <span class="filter-option" data-value="green">Green</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-list-container">
+        <div
+          class="product"
+          data-price="30"
+          data-size="M,L,XL"
+          data-color="blue"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper">
+              <img
+              class="product-img"
+              src="../img/products/blue shirt.jpg"
+            />
+            </div>
+              <figcaption class="product-info">
+              <h3 class="product-title-s">Shirts</h3>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="50"
+          data-size="S,M,L"
+          data-color="white,cream"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/white swearer.jpg"
+            />
+            </div>
+              <figcaption class="product-info">
+              <h2 class="product-title-s">Cotton Sweater</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="45"
+          data-size="M,L,XL"
+          data-color="blue"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/blue sweater.png"
+            />
+            </div>
+              <figcaption class="product-info">
+              <h2 class="product-title-s">Wool Sweater</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="70"
+          data-size="L,XL"
+          data-color="green,black,cream"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/green jacket.png"
+            />
+            </div>
+              <figcaption class="product-info">
+              <h2 class="product-title-s">Jacket</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="100"
+          data-size="X,XS"
+          data-color="black"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/black leather jacket.jpg"
+            />
+            </div>
+              <figcaption class="product-info">
+              <h2 class="product-title-s">Leather Jacket</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="120"
+          data-size="S,M,XL"
+          data-color="blue,cream"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/blue jacket.jpg"
+            />
+            </div>
+              <figcaption class="product-info">
+              <h2 class="product-title-s">Loose Jacket</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+              <div 
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="60"
+          data-size="XS,S"
+          data-color="blue"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/blue trousers.png">
+              </div>
+            <figcaption class="product-info">
+              <h2 class="product-title-s">Trousers</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="130"
+          data-size="M, L, XL"
+          data-color="black,grey"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products//black overcoat.png">
+              </div>
+            <figcaption class="product-info">
+              <h2 class="product-title-s">Overcoat</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="60"
+          data-size="XL"
+          data-color="blue"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/denim jacket.jpg">
+              </div>
+            <figcaption class="product-info">
+              <h2 class="product-title-s">Denim Jacket</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="30"
+          data-size="M,L"
+          data-color="white"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/white t-shirt.jpg">
+              </div>
+            <figcaption class="product-info">
+              <h2 class="product-title-s">T-Shirts</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="100"
+          data-size="M,L"
+          data-color="black"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img//products/black slip shoes.jpeg">
+              </div>
+            <figcaption class="product-info">
+              <h2 class="product-title-s">Slip Shoes</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+                <div
+          class="product"
+          data-price="30"
+          data-size="S"
+          data-color="grey"
+        >
+          <figure class="product-figure">
+            <div class="product-img-wrapper"><img
+              class="product-img"
+              src="../img/products/scarf.png">
+              </div>
+            <figcaption class="product-info">
+              <h2 class="product-title-s">Scarf</h2>
+              <p class="price">€ <span class="price-value">89.95</span></p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- LOGBOOK CARROUSSEL -->
+    <section class="carrousel">
+      <h1 class="carrousel-title">Check our lookbook</h1>
+      <div class="carrousel-container">
+        <div>
+          <img
+            src="https://hips.hearstapps.com/ell.h-cdn.co/assets/16/34/elle-parka-patagonia.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.the-house.com/adidas-terrex-agravic-primaloft-jacket-utility-black-16.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://static.golfonline.co.uk/media/img/639785_021_a.857x1000.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="http://media.topshop.com/wcsstore/TopShop/images/catalog/TS13D05NBRG_Zoom_F_1.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://hips.hearstapps.com/ell.h-cdn.co/assets/16/34/elle-parka-patagonia.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.the-house.com/adidas-terrex-agravic-primaloft-jacket-utility-black-16.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://static.golfonline.co.uk/media/img/639785_021_a.857x1000.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="http://media.topshop.com/wcsstore/TopShop/images/catalog/TS13D05NBRG_Zoom_F_1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!--FOOTER-->
+    <footer>
+      <div class="col">
+        <h3>Collection</h3>
+        <ul>
+          <li><a href="#">Woman</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Coming soon</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Site</h3>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Copyright Policy</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Shipping methods</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col social-footer">
+        <h3>Social</h3>
+        <p>Shoper is made with love in Warsaw, El passion</p>
+        <p>2014 © All rights deserved.</p>
+        <div class="social-icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

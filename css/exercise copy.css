@@ -1,0 +1,511 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-title,
+.product-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 20px auto;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+}
+
+.italizice, .section-subtitle,
+.carrousel-title, .product-reference {
+  font-family: "Source Serif Pro", serif;
+  font-style: italic;
+  color: #606060;
+}
+
+.section-subtitle,
+.carrousel-title {
+  font-size: 25px;
+}
+
+.section-subtitle[href],
+.carrousel-title[href] {
+  text-decoration: underline;
+}
+
+.price-subtotal {
+  color: orange;
+}
+
+.option-text {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper--small {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.shipping label,
+.payment-section label {
+  text-transform: uppercase;
+}
+
+.shipping input,
+.shipping select,
+.payment-section input,
+.payment-section select {
+  border: 1px solid #c2c2c2;
+  padding: 1.5rem 1rem;
+  margin: 1rem 0;
+  margin-bottom: 5rem;
+  width: 100%;
+  display: block;
+}
+
+.highlight-text {
+  background-color: #606060;
+}
+
+.highlight-text img {
+  width: 30px;
+}
+
+.social {
+  background-color: #bbbbbb;
+}
+
+.new-arrival {
+  background-color: #d7d7d7;
+}
+
+.product-highlight {
+  background-color: #cacaca;
+}
+
+.default-bg {
+  background-color: #dbdbdb;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.filter-show {
+  display: block;
+}
+
+.filter-hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  -webkit-animation-name: opacity-transition;
+          animation-name: opacity-transition;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes opacity-transition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes opacity-transition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #000;
+  vertical-align: middle;
+}
+
+.nav .menu {
+  padding: 40px 20px;
+}
+
+.nav .menu li {
+  display: inline;
+}
+
+.nav .menu .menu-item {
+  font-size: 16px;
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.hero {
+  height: 700px;
+  background: #19b4c6;
+  background: linear-gradient(115deg, #19b4c6 35%, #078aa4 100%);
+}
+
+@media screen and (max-width: 640px) {
+  .hero {
+    height: 500px;
+  }
+}
+
+.hero .hero-wrapper {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: relative;
+  max-width: 1440px;
+  margin: 0 20% 0 5%;
+  color: white;
+}
+
+.hero .hero-wrapper .hero-title {
+  font-size: 88px;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+@media all and (max-width: 1440px) {
+  .hero .hero-wrapper .hero-title {
+    font-size: 75px;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .hero .hero-wrapper .hero-title {
+    font-size: 65px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .hero .hero-wrapper .hero-title {
+    font-size: 55px;
+  }
+}
+
+.hero .hero-wrapper .hero-subtitle {
+  opacity: .6;
+  font-size: 40px;
+}
+
+.hero .hero-wrapper .fas {
+  font-size: 40px;
+  float: right;
+}
+
+.robin-hood {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 640px) {
+  .robin-hood {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .robin-hood {
+    height: 300px;
+  }
+}
+
+.robin-hood .two-thirds {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  background: #27212c;
+  position: relative;
+  text-align: center;
+}
+
+.robin-hood .two-thirds h2 {
+  color: #b1b1b1;
+  font-size: 50px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .robin-hood .two-thirds h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .robin-hood .two-thirds h2 {
+    font-size: 20px;
+  }
+}
+
+.robin-hood .arrow {
+  position: relative;
+  display: inline-block;
+  background-color: #bc3183;
+  width: 20%;
+  color: white;
+  font-size: 30px;
+}
+
+.robin-hood .arrow .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+.columns-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.columns-3 .col {
+  width: 33%;
+  height: calc(33vw);
+}
+
+@media screen and (max-width: 640px) {
+  .columns-3 .col {
+    width: 100%;
+    height: 100vw;
+  }
+}
+
+.columns-3 .arrow {
+  background: purple;
+  position: relative;
+}
+
+.columns-3 .arrow .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+}
+
+@media screen and (max-width: 640px) {
+  .columns-3 .arrow .fas {
+    font-size: 90px;
+  }
+}
+
+.columns-3 .image {
+  background-size: cover;
+}
+
+.columns-3 .bridge {
+  background-image: url("http://yesofcorsa.com/wp-content/uploads/2015/08/4173_golden_gate_bridge.jpg");
+}
+
+.columns-3 .woman {
+  background-image: url("https://yoursingoodhealth.files.wordpress.com/2015/07/woman-smiling_veer1.jpg");
+}
+
+footer {
+  background-color: lightgray;
+  padding: 70px;
+  font-size: 0;
+}
+
+footer h2 {
+  font-size: 30px;
+  color: #088ca5;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+footer .footer-text {
+  vertical-align: top;
+  font-size: 16px;
+  display: inline-block;
+  width: calc(50% - 25px);
+  line-height: 25px;
+  color: gray;
+}
+
+footer .footer-text:nth-of-type(1) {
+  margin-right: 50px;
+}
+
+footer .footer-text:nth-of-type(2) {
+  margin-right: -4;
+}

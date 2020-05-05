@@ -1,0 +1,389 @@
+header {
+  width: 95%;
+  margin: 0 auto;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid $light-gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // /* Thinner header for <=1200px */
+  // @include media("<=1360px") {
+  //   padding: 30px 0px;
+  // }
+
+  // /* Thinner header for mobile */
+  // @include media("<=small") {
+  //   padding: 15px 0px;
+  // }
+
+  .main-nav {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    // height: 4rem;
+  }
+
+  /* Logo is text with padding around it */
+  .logo {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 2rem 2rem;
+    margin-right: 2rem;
+    color: $white;
+    background-color: $black;
+
+    // /* Reduces margin so hamburger menu isn't too far to the right */
+    // @include media("<large") {
+    //   margin-right: 0px;
+    // }
+
+    // /* Reduce margin to give more space for menu links between 1024 and 1200 */
+    // @include media(">=large", "<=1360px") {
+    //   margin-right: 5px;
+    // }
+  }
+
+  /* menu-btn is the class for the checkbox behind hamburger menu */
+  .menu-btn {
+    display: none;
+    /* Shows the menu on click */
+    &:checked ~ .menu {
+      left: -22px;
+    }
+    /* Next lines make up the animation of the hamburger menu  when opening*/
+    &:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+    &:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+    &:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+    &:checked ~ .menu-icon:not(.steps) .navicon:before {
+      top: 0;
+    }
+    &:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+  }
+
+  /* menu-icon is the label for what appaears above the menu-btn checkbox */
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 2rem 2rem;
+    position: relative;
+    user-select: none;
+    @include media(">=large") {
+      display: none;
+    }
+    /* renders one line and adds lines on top and below it */
+    .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background 0.2s ease-out;
+      width: 18px;
+
+      &:before,
+      &:after {
+        background: #333;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+      }
+
+      &::after {
+        top: -5px;
+      }
+      &::before {
+        top: 5px;
+      }
+    }
+  }
+
+  /* Make each section use flexbox */
+  .menu,
+  .account {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    li {
+      position: relative;
+      display: inline;
+      /* Add padding and center menu links*/
+      a {
+        position: relative;
+        display: inline-block;
+        border: none;
+        color: $primary-color;
+        font-size: 2rem;
+        font-weight: 600;
+        transition: all 0.2s;
+        padding: 1rem $menu-gutter;
+        /* Reduce padding between linnks for screens between 1024 and 1200 */
+        @include media(">=large", "<=x-large") {
+          padding: 1rem calc(#{$menu-gutter * .65});
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: calc(100% - (#{$menu-gutter} * 2));
+          height: 2px;
+          bottom: 0px;
+          left: $menu-gutter;
+          background-color: $secondary-color;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s;
+        }
+        
+        &:hover::before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .account {
+      /* Hide right account section for mobile */
+    @include media("<medium") {
+      display: none;
+    }
+    .fas {
+      margin-right: 10px;
+      vertical-align: baseline;
+    }
+  }
+
+  .logout-link {
+    color: orange;
+  }
+  /* Mobile and tablet menu for screens <1024px */
+  .menu {
+    @include media("<large") {
+      position: absolute;
+      flex-direction: column;
+      width: 30rem;
+      top: calc(3.5rem + 6rem);
+      left: -380px;
+      height: 100vh;
+      z-index: 1;
+      transition: left 0.5s ease-in-out;
+      background-color: $light-gray;
+
+      li {
+        a {
+          width: 100%;
+          margin: 1rem 0;
+          background-color: $light-gray;
+        }
+      }
+    }
+
+    .mobile-account {
+      @include media(">=medium") {
+        display: none;
+      }
+
+      @include media("<medium") {
+        i {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+// Basket Section
+.account>ul>li:last-child {
+  position: relative;
+}
+
+.basket{
+  &::after{
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 2rem);
+    background: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $light-gray $light-gray $white $light-gray;
+    opacity: 0;
+  }
+  &:hover + .basket-products{
+    visibility: visible;
+  }
+}
+  .basket-products {
+    z-index: 1;
+    border: $light-gray 1px solid;
+    top: 3.2rem;
+    right: 0;
+    padding: 2rem 1.5rem 2rem 2rem;
+    position: absolute;
+    background-color: $white;
+    width: 50rem;
+    visibility: hidden;
+    &::before{
+      content:"";
+      z-index: 2;
+      position: absolute;
+      top: -6rem;
+      right: 0;
+      height: 6rem;
+      width: 14rem;
+      background: none;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $light-gray $light-gray $white $light-gray;
+    }
+    &:hover{
+      visibility: visible;
+    }
+  
+    .basket-product {
+      display: flex;
+      align-items: center;
+      height: 8rem;
+      border-bottom: 1px $light-gray solid;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .img-thumb-cont {
+      position: relative;
+      width: 6rem;
+      height: 6rem;
+      overflow: hidden;
+      border: $light-gray;
+    }
+    .product-thumbnail {
+      @include center('vertical');
+      width: 100%;
+      height: auto;
+    }
+    .product-title {
+      width: 25rem;
+      font-size: 2rem;
+      margin: 0 1.5rem;
+    }
+    .product-price {
+      width: 10rem;
+      font-size: 1.5rem;
+      font-family: $secondary-font;
+      color: $darker-gray;
+      // text-rendering: auto;
+      // -webkit-font-smoothing: antialiased;
+    }
+  
+    .fa-times {
+      font-size: 2rem;
+      color: $darker-gray;
+    }
+  
+    .price-total-container {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      align-items: center;
+      font-size: 1.6rem;
+    }
+    .btn-checkout {
+      font-size: 1.6rem;
+      padding: 1.5rem 2.5rem;
+      float: right;
+    }
+  }
+
+  // Search
+  .search-section {
+    position: relative;
+    margin-left: 2rem;
+    .input {
+      float: left;
+      width: 0;
+      height: 6rem;
+      border: 1px #ffffff solid;
+      box-sizing: border-box;
+      background: white;
+      font-size: 1.6rem;
+      font-family: $primary-font;
+      transition: width .4s ease-in-out, border-color .1s ease, padding-left .3s ease-in-out, padding-right .3s ease-in-out;
+      transition-delay: 0s, .35s, 0s, 0s;
+      outline: 0;
+      @include media(">=large", "<x-large") {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        padding: 0 1rem;
+        width: 6rem;
+        border: 1px solid $darker-gray;
+        transition: top 0.2s ease-in-out, width 0.4s ease-in-out .1s;
+        transition-delay: 0.6s, 0.2s, 1s;
+      }
+    }
+
+    .expand {
+      width: 20rem;
+    }
+
+    .search {
+      float: right;
+      position: relative;
+      width: 6rem;
+      height: 6rem;
+      top: 0;
+      right: 0;
+      padding: 1.5rem;
+      cursor: pointer;
+      outline: 0;
+      background: none;
+      border: 1px solid $darker-gray;
+      transition: all .3s ease;
+      &--active {
+        color: $white;
+        background: $darker-gray;
+      }
+
+      @include media(">=large", "<x-large") {
+        margin: 0px;
+        position: relative;
+        background-color: white;
+        &--active {
+          background: $darker-gray;
+        }
+      }
+    }
+
+    .rectangle {
+      width: 200px;
+      border: 1px solid $darker-gray;
+      border-right-color: #ffffff;
+      padding: 0 1rem;
+      transition: width 0.4s ease-in-out, padding-left 0.1s ease-in-out, padding-right .5s ease-in-out;
+      @include media(">=large", "<x-large") {
+        border-right-color: $darker-gray;
+        top: 5.9rem;
+        right: 0px;
+        background-color: white;
+        transition: top 0.2s ease-in-out, width 0.4s ease-in-out, padding 0.2s,
+        background-color 0s;
+        transition-delay: 0.2s, 0.4s, 0.3s;
+        }
+      }
+    }
+  }

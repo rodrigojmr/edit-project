@@ -1,0 +1,196 @@
+.shopping-cart {
+    .wrapper {
+        margin-top: 15rem;
+        margin-bottom: 10rem;
+        @include media ("<medium") {
+            margin-top: 8rem;
+            margin-bottom: 10rem;
+            width: 85%;
+        }
+    }
+
+    // Table Dimensions
+
+    table {
+        font-size: 1.6rem;
+    }
+    thead {
+        tr {
+        color: $gray;
+        vertical-align: bottom;
+        text-transform: uppercase;
+        font-weight: 600;
+        }
+        th {
+            text-align: start;
+        }
+    }
+    tfoot {
+        tr {
+            td {
+                background-color: $light-gray;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+    @include media(">=medium") {
+        table {
+            width: 95%;
+            margin: 0 auto;
+        }
+        thead, tr {
+            border-bottom: 1px solid $light-gray;
+        }
+        thead {
+            tr {
+            height: 2.5rem;   
+            }
+        }
+        tbody {
+            tr {
+                height: 15rem;
+                td {
+                    vertical-align: middle;
+                    &:nth-of-type(1),
+                    &:nth-of-type(4),
+                    &:nth-of-type(5),
+                    &:nth-of-type(6) {
+                        width: 10%;
+                    }
+                    &:nth-of-type(2) {
+                        width: 43%;
+                    }
+                    &:nth-of-type(3) {
+                        width: 12%;
+                    }
+                    &:nth-of-type(7) {
+                        width: 5%;
+                    }
+                }
+            }
+        }
+        tfoot {
+            tr {
+                height: 5rem;
+                td {
+                    background-color: $light-gray;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    @include media("<medium") {
+        .product-table {
+            position: relative;
+        }
+        table, thead, tbody, th, td, tr { 
+            display: block; 
+        }
+        thead { 
+            display: none;
+        }
+        tbody tr {
+            position: relative;
+            height: 12rem;
+            padding: 2rem 0;
+            width: 100%;
+        }
+        tbody td{
+            position: absolute;
+            &:nth-of-type(1) {
+                width: 10rem;
+            }
+            &:nth-of-type(2) {
+                top: 0;
+                left: 10rem;
+            }
+            &:nth-of-type(3) {
+                top: 50%;
+                left: 10rem;
+            }
+            &:nth-of-type(4) {
+                top: 70%;
+                left: 14rem;
+                &::before {
+                    content:"Size:";
+                    position: absolute;
+                    left: -4rem;
+                }
+            }
+            &:nth-of-type(5) {
+                top: 48%;
+                right: 14rem;
+            }
+            &:nth-of-type(6) {
+                top: 50%;
+                right: 8rem;
+            }
+            &:nth-of-type(7) {
+                top: 50%;
+                right: 3rem;
+            }
+        }
+        tfoot {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 100%;
+            td {
+                &:nth-of-type(1) {
+                    display: none;
+                }
+                &:nth-of-type(2) {
+                    width: 100%;
+                    padding: 1rem;
+                    .price-subtotal {
+                        margin-left: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-title {
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .product-img-container {
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .product-table-img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        @include center('vertical');
+    }
+
+    .product-quantity {
+        position: relative;
+        width: 3rem;
+        font-size: 1.6rem;
+        margin: 0 auto;
+        border: $light-gray
+        }
+    
+    .price-subtotal {
+        margin-left: 5rem;
+    }
+
+.check-confirm {
+    margin: 0 auto;
+    margin-top: 75px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media("<medium") {
+        width: 90%;
+    }
+}

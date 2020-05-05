@@ -1,0 +1,92 @@
+.newsletter {
+  height: 60%;
+  position: relative;
+
+  @include media("retina2x", ">medium", "<=large") {
+    height: 40%;
+  }
+
+  @include media("retina2x", ">small", "<=medium") {
+    height: 50%;
+  }
+
+  @include media("<=small") {
+    height: 70%;
+  }
+
+  .wrapper {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    .section-title {
+      margin-bottom: 20px;
+      @include media("<=x-large") {
+        margin-bottom: 25px;
+      }
+    }
+    p {
+      font-family: $terciary-font;
+      font-style: italic;
+      color: $secondary-color;
+      font-size: 24px;
+
+      @include media("<=x-large") {
+        font-size: 20px;
+      }
+      @include media("<=large") {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.row {
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+
+  @include media(">large", "<=x-large") {
+    width: 50%;
+  }
+  @include media(">medium", "<=large") {
+    width: 60%;
+  }
+  @include media(">small", "<=medium") {
+    width: 70%;
+  }
+  @include media("<=small") {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .newsletter-form {
+    position: relative;
+    width: 100%;
+
+    .newsletter-email {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid gray;
+      padding: 20px 65px 20px 20px;
+    }
+
+    .newsletter-submit {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      padding: 10px 25px;
+      color: white;
+      background: orangered;
+      border: none;
+    }
+  }
+}

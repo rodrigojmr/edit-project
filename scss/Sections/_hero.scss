@@ -1,0 +1,71 @@
+.hero {
+  height: 75vh;
+  // background-position: center bottom;
+  // background-size: cover;
+  // background-image: url('https://images.unsplash.com/photo-1572288623221-031943aac8c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80');
+
+  // @include media(">small", "<=medium") {
+  //   height: 60%;
+  // }
+
+  // @include media("<=small") {
+  //   height: 80%;
+  // }
+
+  // @include media("retina2x", ">small", "<=large") {
+  //   height: 50%;
+  // }
+
+  .wrapper {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    max-width: 1440px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+    @include media("<medium") {
+       width: 90%;
+    }
+
+    .hero-title {
+      font-size: 8rem;
+      font-weight: 400;
+      margin-bottom: 30px;
+      @include media("<=small") {
+        font-size: 5rem;
+      }
+      @include media(">small","<=medium") {
+        font-size: 6rem;
+      }
+    }
+
+    .hero-subtitle {
+      font-family: $terciary-font;
+      font-size: 3rem;
+      font-style: italic;
+      color: $secondary-color;
+      margin-bottom: 5rem;
+      @include media("<medium") {
+        font-size: 2.5rem;
+      }
+    }
+
+    .btn {
+      font-size: 2rem;
+      padding: 3rem 4rem;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $white;
+        background: $darker-gray;
+        font-size: 2rem;
+      }
+
+      @include media("<=small") {
+        padding: 2rem 3rem;
+      }
+    }
+  }
+}

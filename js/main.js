@@ -87,7 +87,15 @@ $(document).ready(function() {
             }
             },
             {
-            breakpoint: 480,
+            breakpoint: 900,
+            settings: {
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+            },
+            {
+            breakpoint: 600,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1

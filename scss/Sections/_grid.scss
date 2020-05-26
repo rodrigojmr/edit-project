@@ -11,13 +11,13 @@
         font-size: 14px;
         vertical-align: middle;
 
-        @include media(">=large","<xx-large") {
+        @include media(">=x-large","<xx-large") {
             height: 100vh;
         }
-        @include media(">medium","<=large") {
-            height: 110vh;
-        }
-        @include media("<=medium") {
+        // @include media(">medium","<=x-large") {
+        //     height: 110vh;
+        // }
+        @include media("<=large") {
             // height: 90vh;
             width: 50%;
         }

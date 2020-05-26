@@ -65,7 +65,7 @@
 
 <body>
 	<!--HEADER-->
-    <header>
+	<header>
 		<nav class="main-nav">
 		  <a href="index.html" class="logo">SH</a>
 		  <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -73,16 +73,16 @@
 			<span class="navicon"></span>
 		  </label>
 		  <ul class="menu">
-			<li><a href="#">Woman</a></li>
-			<li><a href="#">Men</a></li>
-			<li><a href="#">Kids</a></li>
-			<li><a href="#">Coming Soon</a></li>
-			<li><a href="#">About</a></li>
+			<li class="menu__list-item"><a class="menu__link" href="#">Woman</a></li>
+			<li class="menu__list-item"><a class="menu__link" href="#">Men</a></li>
+			<li class="menu__list-item"><a class="menu__link" href="#">Kids</a></li>
+			<li class="menu__list-item"><a class="menu__link" href="#">Coming Soon</a></li>
+			<li class="menu__list-item"><a class="menu__link" href="about.html">About</a></li>
 			<li class="mobile-account">
-			  <a href="#" class="login"><i class="fas fa-user"></i>Log In</a>
+			  <a class="menu__link" href="#" class="login"><i class="fas fa-user"></i>Log In</a>
 			</li>
 			<li class="mobile-account">
-			  <a href="#" class="basket"
+			  <a class="menu__link" href="#" class="basket"
 				><i class="fas fa-shopping-basket"></i>Basket</a
 			  >
 			</li>
@@ -90,11 +90,11 @@
 		</nav>
 		<div class="account">
 		  <ul>
-			<li>
-			  <a href="#" class="login"><i class="fas fa-user"></i>Log In</a>
+			<li class="account__list-item">
+			  <a href="#" class="account__link login"><i class="fas fa-user"></i>Log In</a>
 			</li>
-			<li>
-			  <a href="#" class="basket"
+			<li class="account__list-item">
+			  <a href="#" class="account__link basket"
 				><i class="fas fa-shopping-basket"></i>Basket</a
 			  >
 			  <ul class="basket-products">
@@ -122,7 +122,7 @@
 				  <p>
 					<em>Subtotal:</em> <span class="price-subtotal">€567.95</span>
 				  </p>
-				  <button class="btn btn--orange btn-checkout">Checkout</button>
+				  <a href="/shopping cart.html" class="btn btn--orange btn-checkout">Checkout</a>
 				</li>
 			  </ul>
 			</li>
